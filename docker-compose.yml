@@ -2,15 +2,15 @@ version: "3.11"
 
 services:
   db:
-      image: postgres:13-alpine
-      volumes:
-        - dev-db-data:/var/lib/postgresql/data
-      environment:
-        - POSTGRES_DB=eltechdb
-        - POSTGRES_USER=eltechuser
-        - POSTGRES_PASSWORD=eltechpassword
-      ports:
-        - "5432:5432"
+    image: postgres:13-alpine
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=eltechdb
+      - POSTGRES_USER=eltechuser
+      - POSTGRES_PASSWORD=eltechpassword
+    ports:
+      - "5432:5432"
   app:
     build:
       context: .
